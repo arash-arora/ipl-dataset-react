@@ -1,8 +1,11 @@
 import "../styles/globals.css";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   return (
     <div className=' md:max-w-6xl mx-auto flex flex-col justify-center items-center'>
       <Head>
@@ -14,17 +17,11 @@ export default function MyApp({ Component, pageProps }) {
           Welcome to the metaverse of IPL
         </h1>
         <Header />
-        <Component {...pageProps} />
+        <Component {...pageProps} key={router.asPath} />
       </main>
-      {/* <footer>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          Powered by{" "}
-          <img src='/vercel.svg' alt='Vercel Logo' className='logo' />
-        </a>
-      </footer> */}
+      <div className='mt-10 w-full'>
+        <Footer />
+      </div>
       <style jsx global>{`
         html,
         body {

@@ -8,16 +8,17 @@ import {
   Legend,
 } from "recharts";
 
-export default function Barchart({ data }) {
+export default function Barchart({ data, clicked }) {
   function compareUV(a, b) {
-    return b.uv - a.uv;
+    return b.player_of_match - a.player_of_match;
   }
-  //   const d = data.slice(0, 10);
-  var d1 = data.sort(compareUV);
-  const d = data.slice(0, 5);
+  data.sort(compareUV);
+  var x = clicked === false ? 5 : 10;
+  const d = data.slice(0, x);
   return (
     <BarChart
-      width={700}
+      width={clicked === false ? 700 : 1200}
+      style={{ transition: "1s ease-in-out" }}
       height={500}
       data={d}
       margin={{
@@ -31,7 +32,7 @@ export default function Barchart({ data }) {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey='uv' fill='#82ca9d' />
+      <Bar dataKey='player_of_match' fill='#82ca9d' />
     </BarChart>
   );
 }

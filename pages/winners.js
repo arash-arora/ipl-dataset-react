@@ -4,7 +4,7 @@ import Piechart from "../components/Piechart";
 
 export default function Winners({ isConnected, users }) {
   var teams = [];
-  users.map(({ team1, team2 }) => {
+  users.map(({ team1 }) => {
     if (!teams.includes(team1)) {
       teams.push(team1);
     }
@@ -31,16 +31,21 @@ export default function Winners({ isConnected, users }) {
     <>
       <div className='flex justify-center items-center flex-wrap'>
         <Piechart data={data01} />
-        <div className='w-[300px] block text-justify'>
-          {entries.map((entry, y) => {
-            return (
-              <p
-                key={y}
-                className='hover:text-red-600 text-justify justify-center flex items-center transition text-md tracking-wide leading-6'>
-                {entry[0]} : {entry[1]}
-              </p>
-            );
-          })}
+        <div className='w-[350px] block text-justify'>
+          <table className={`table-auto border-2 mt-12 text-center`}>
+            <tr className='border-2'>
+              <th className='border-2'>Team Name</th>
+              <th className='border-2'>Matches Won</th>
+            </tr>
+            {entries.map((entry, y) => {
+              return (
+                <tr className='border-2' key={y}>
+                  <td className='border-2'>{entry[0]}</td>
+                  <td className='border-2'>{entry[1]}</td>
+                </tr>
+              );
+            })}
+          </table>
         </div>
       </div>
 

@@ -6,13 +6,13 @@ export default function Header() {
           <a href='/'>Home</a>
         </li>
         <li>
-          <a href='/winners'>Winners</a>
+          <a href='/winners'>Total Matches won by Teams</a>
         </li>
         <li>
-          <a href='/teams'>Teams</a>
+          <a href='/teams'>Team Stats</a>
         </li>
         <li>
-          <a href='/player-of-match'>Players</a>
+          <a href='/player-of-match'>Man of the Match</a>
         </li>
       </ul>
     </nav>
