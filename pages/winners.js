@@ -30,6 +30,9 @@ export default function Winners({ isConnected, users }) {
   return (
     <>
       <div className='flex justify-center items-center flex-wrap'>
+        <h1 className='text-3xl mb-2 font-semibold'>
+          Matches won by each Team
+        </h1>
         <Piechart data={data01} />
         <div className='w-[350px] block text-justify'>
           <table className={`table-auto border-2 mt-12 text-center`}>

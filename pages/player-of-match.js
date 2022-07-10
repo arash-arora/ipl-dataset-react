@@ -31,6 +31,7 @@ export default function Players({ _isConnected, users }) {
   const [clickedA, setClickedA] = useState(false);
   return (
     <div className='mt-12 flex flex-col justify-center items-center flex-wrap'>
+      <h1 className='text-3xl mb-2 font-semibold'>Man of the Match Stats</h1>
       <Barchart data={data02} clicked={clicked} />
       <div className='flex gap-8'>
         <button
