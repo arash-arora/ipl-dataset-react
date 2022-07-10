@@ -17,14 +17,15 @@ export default function Barchart({ data, clicked }) {
   var x = clicked === false ? 5 : 10;
   const d = data.slice(0, x);
   return (
-    <div className='w-full min-w-[320px] h-[400px] text-[10px] md:text-xl'>
+    <div className='w-full md:w-[80%] min-w-[320px] h-[400px]'>
       <ResponsiveContainer>
         <BarChart
-          width={clicked === false ? 800 : 1080}
+          width={clicked === false ? 1200 : 1500}
+          className='overflow-x-scroll md:overflow-x-hidden md:w-full w-3/2'
           style={{
-            width: "70%",
+            // width: "100%",
             transition: "1s ease-in-out",
-            overflowX: "scroll",
+            fontSize: "16px",
           }}
           height={500}
           data={d}

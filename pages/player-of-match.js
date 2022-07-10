@@ -33,7 +33,7 @@ export default function Players({ _isConnected, users }) {
     <div className='mt-12 flex flex-col justify-center items-center flex-wrap mx-2 md:mx-0'>
       <h1 className='text-3xl mb-2 font-semibold'>Man of the Match Stats</h1>
       <Barchart data={data02} clicked={clicked} />
-      <div className='flex gap-8'>
+      <div className='flex gap-8 mt-12'>
         <button
           onClick={() => setClicked(!clicked)}
           className='mt-2 px-2 transition hover:bg-black hover:text-white border-black border-2'>
