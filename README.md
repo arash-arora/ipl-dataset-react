@@ -34,4 +34,8 @@
    - Team wise stats
    - Matches won by each team
    
+## Mobile Responsive
+ - Used tailwindcss framework of css to apply styles
+ - To optimise the code, I've created different components to be able to reuse them easily
+ 
 ### As the man of the match title was entitled to over 200 people, so I've manages to showcase just top 5 players with an option to view more.
