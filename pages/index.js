@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className='mt-32 flex flex-wrap justify-center gap-16 items-center'>
-      <h1 className='text-2xl font-semibold max-w-lg flex-1'>
+      <h1 className='text-2xl font-semibold max-w-lg flex-1 text-justify'>
         This portal gives you an insight of IPL matches played by participating
         teams. It provides you the dashboard with various analytical features of
         teams, players, match results, man of the match, marginal runs & wickets

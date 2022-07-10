@@ -29,7 +29,7 @@ export default function TeamDetail({ isConnected, users }) {
         "Loading... Try Refreshing!! "
       ) : (
         <>
-          <table className='table-auto border-2 mt-20 px-2'>
+          <table className='table-auto md:text-xl text-[9px] border-2 mt-32 md:mt-20 px-2 overflow-x-scroll md:overflow-hidden'>
             <tr className='border-2'>
               <th className='border-2 px-2'>Season</th>
               <th className='border-2 px-2'>Team1</th>
@@ -67,7 +67,7 @@ export default function TeamDetail({ isConnected, users }) {
               );
             })}
           </table>
-          <p className='text-xl font-bold absolute top-[280px] left-0 right-0'>
+          <p className='text-xl font-bold absolute top-[450px] md:top-[280px] left-0 right-0'>
             Matches Won : {t} / {users.length} <br />
             Largest Margin by Runs : {runs} &nbsp;|&nbsp; Largest Margin by
             Wicket : {wickets} <br />

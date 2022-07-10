@@ -29,22 +29,24 @@ export default function Winners({ isConnected, users }) {
 
   return (
     <>
+      <h1 className='text-3xl mb-2 font-semibold mt-8'>
+        Matches won by each Team
+      </h1>
       <div className='flex justify-center items-center flex-wrap'>
-        <h1 className='text-3xl mb-2 font-semibold mt-8'>
-          Matches won by each Team
-        </h1>
         <Piechart data={data01} />
-        <div className='w-[350px] block text-justify'>
-          <table className={`table-auto border-2 mt-12 text-center`}>
-            <tr className='border-2'>
-              <th className='border-2'>Team Name</th>
-              <th className='border-2'>Matches Won</th>
+        <div className='w-full flex justify-center text-justify'>
+          <table className={`table-auto border-2 md:mt-12 text-center`}>
+            <tr className='border-2 px-2'>
+              <th className='border-2 px-2'>Team Name</th>
+              <th className='border-2 px-2'>Matches Won</th>
             </tr>
             {entries.map((entry, y) => {
               return (
-                <tr className='border-2' key={y}>
-                  <td className='border-2'>{entry[0]}</td>
-                  <td className='border-2'>{entry[1]}</td>
+                <tr className='border-2 px-2' key={y}>
+                  <td className='border-2 px-2'>
+                    <a href={`/teams/${entry[0]}`}>{entry[0]}</a>
+                  </td>
+                  <td className='border-2 px-2'>{entry[1]}</td>
                 </tr>
               );
             })}

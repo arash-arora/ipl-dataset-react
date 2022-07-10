@@ -6,7 +6,7 @@ export default function Footer() {
       <footer className='w-full text-center mb-5 text-[#706c6c]'>
         <hr />
         <div className='flex items-center justify-center mt-5 gap-5'>
-          <div>
+          <div className='whitespace-nowrap'>
             Developed by &nbsp;
             <span className='font-bold animate-pulse'>Arash Arora</span>
           </div>

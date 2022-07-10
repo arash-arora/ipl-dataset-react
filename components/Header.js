@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <nav className='mt-5 flex justify-center items-center'>
-      <ul className='flex gap-8 transition md:gap-20 text-[#444444] text-sm md:text-md'>
+      <ul className='flex text-left gap-5 flex-wrap transition md:gap-20 text-[#444444] text-sm md:text-md mx-12 justify-center items-start'>
         <li>
           <a href='/'>Home</a>
         </li>

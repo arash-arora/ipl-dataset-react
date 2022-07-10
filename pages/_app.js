@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <div className=' md:max-w-6xl mx-auto flex flex-col justify-center items-center'>
+    <div className='mx-12 md:mx-auto md:max-w-3xl lg:max-w-6xl flex flex-col justify-center items-center'>
       <Head>
         <title>IPL Metaverse</title>
         <link rel='icon' href='/favicon.ico' />
