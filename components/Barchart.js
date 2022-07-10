@@ -17,7 +17,7 @@ export default function Barchart({ data, clicked }) {
   var x = clicked === false ? 5 : 10;
   const d = data.slice(0, x);
   return (
-    <div className='w-full md:w-[80%] min-w-[320px] h-[400px]'>
+    <div className='w-full md:w-[85%] min-w-[320px] h-[400px]'>
       <ResponsiveContainer>
         <BarChart
           width={clicked === false ? 1200 : 1500}

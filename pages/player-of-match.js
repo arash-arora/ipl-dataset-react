@@ -21,12 +21,17 @@ export default function Players({ _isConnected, users }) {
     });
   }
   const entries = Object.entries(obj);
-
   const data02 = [];
   entries.map((e) => {
     data02.push({ name: e[0], player_of_match: e[1] });
   });
-  console.log(data02);
+  // console.log(data02);
+
+  function compareUV(a, b) {
+    return b.player_of_match - a.player_of_match;
+  }
+  data02.sort(compareUV);
+
   const [clicked, setClicked] = useState(false);
   const [clickedA, setClickedA] = useState(false);
   return (
