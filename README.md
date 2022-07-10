@@ -20,4 +20,18 @@
 - The web app is hosted on vercel
 - Offline usable unto certain extent
 
+# Features 
+## Charts 
+- To create the charts, I've requested the data from the mongodb atlas. Applied some logics to build appropriate charts
+### Charts currently built:
+- Bar charts: to showcase how many times a player won the man of the match title
+- Pie charts: to showcase the total matches won by each team
 
+## Tables of the IPL data
+ - Fetched the data from database
+ - Applied some logic
+ - Create a table for showcasing the data like
+   - Team wise stats
+   - Matches won by each team
+   
+### As the man of the match title was entitled to over 200 people, so I've manages to showcase just top 5 players with an option to view more.
