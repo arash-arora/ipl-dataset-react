@@ -9,6 +9,10 @@ export default function TeamDetail({ isConnected, users }) {
   var runs = 0;
   var wickets = 0;
   var dl = 0;
+  const compareY = (a, b) => {
+    return b.season - a.season;
+  };
+  users.sort(compareY);
   return (
     <div className='flex mt-10 flex-col justify-center items-center'>
       <h1 className='text-2xl font-bold tracking-wider uppercase animate-bounce'>
@@ -25,13 +29,13 @@ export default function TeamDetail({ isConnected, users }) {
         "Loading... Try Refreshing!! "
       ) : (
         <>
-          <table className='table-auto border-2 mt-20'>
+          <table className='table-auto border-2 mt-20 px-2'>
             <tr className='border-2'>
-              <th className='border-2'>Season</th>
-              <th className='border-2'>Team1</th>
-              <th className='border-2'>Team2</th>
-              <th className='border-2'>Winner</th>
-              <th className='border-2'>Won by</th>
+              <th className='border-2 px-2'>Season</th>
+              <th className='border-2 px-2'>Team1</th>
+              <th className='border-2 px-2'>Team2</th>
+              <th className='border-2 px-2'>Winner</th>
+              <th className='border-2 px-2'>Won by</th>
             </tr>
             {users.map((user, id) => {
               if (router.query.id === user.winner) {
@@ -48,13 +52,13 @@ export default function TeamDetail({ isConnected, users }) {
               }
               return (
                 <tr className='border-2' key={id}>
-                  <td className='border-2'>{user.season}</td>
-                  <td className='border-2'>{user.team1}</td>
-                  <td className='border-2'>{user.team2}</td>
-                  <td className='border-2'>
+                  <td className='border-2 px-2'>{user.season}</td>
+                  <td className='border-2 px-2'>{user.team1}</td>
+                  <td className='border-2 px-2'>{user.team2}</td>
+                  <td className='border-2 px-2'>
                     {user.winner ? user.winner : "DL Applied"}
                   </td>
-                  <td>
+                  <td className='border-2 px-2'>
                     {user.win_by_runs == 0
                       ? user.win_by_wickets + " wickets"
                       : user.win_by_runs + " runs"}
