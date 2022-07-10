@@ -30,7 +30,7 @@ export default function Winners({ isConnected, users }) {
   return (
     <>
       <div className='flex justify-center items-center flex-wrap'>
-        <h1 className='text-3xl mb-2 font-semibold'>
+        <h1 className='text-3xl mb-2 font-semibold mt-8'>
           Matches won by each Team
         </h1>
         <Piechart data={data01} />
